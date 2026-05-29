@@ -231,6 +231,7 @@ App runs at `http://localhost:3000`, API at `http://localhost:5000`.
 - **CORS**: Configured to only allow the frontend origin
 - **Helmet**: HTTP security headers
 - **TTL indexes**: Share links auto-delete from DB after expiry
+- **No full credential exposure**: Verification endpoint never returns the original credential — only the presentation
 
 ## What I'd Improve Given More Time
 
