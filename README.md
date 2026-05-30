@@ -5,7 +5,7 @@ A production-grade credential sharing system that lets holders selectively revea
 ## Demo
 
 - **Live App**: https://client-opal-phi-43.vercel.app
-- **Demo Video**: [Replace this with your 5-min YouTube/Loom video link]
+- **Demo Video**: https://youtu.be/QSixOZ3tS0g
 
 ## Why This Problem Statement?
 
