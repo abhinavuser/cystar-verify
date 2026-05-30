@@ -13,7 +13,10 @@ import shareRoutes from './routes/share';
 const app = express();
 
 app.use(helmet());
-app.use(cors({ origin: config.clientUrl, credentials: true }));
+app.use(cors({
+  origin: config.clientUrl.split(',').map(s => s.trim()),
+  credentials: true,
+}));
 app.use(express.json({ limit: '1mb' }));
 app.use(generalLimiter);
 
@@ -33,7 +36,7 @@ async function start() {
   await mongoose.connect(config.mongoUri);
   console.log('connected to mongodb');
 
-  app.listen(config.port, () => {
+  app.listen(config.port, '0.0.0.0', () => {
     console.log(`server running on port ${config.port}`);
   });
 }
